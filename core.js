@@ -1,6 +1,4 @@
-$(function(){
-	alert("HEJ EHEJ HEJ");
-});
+
 $(document).ready(function(){
 	$team = $("#teamButton, #teamButton2");
 	$game = $("#gameButton");

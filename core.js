@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	$team = $("#teamButton, #teamButton2");
-	$game = $("#gameButton");
+	$game = $(".gameButton");
 	$contact = $("#contactButton");
 	
 	$page1 = $("#page1");

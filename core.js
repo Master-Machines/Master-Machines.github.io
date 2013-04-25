@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+	//Creating jQuery variables
 	$team = $("#teamButton, #teamButton2");
 	$game = $(".gameButton");
 	$contact = $("#contactButton");
@@ -8,11 +9,13 @@ $(document).ready(function(){
 	$page2 = $("#page2");
 	$page3 = $("#page3");
 	
+	//Standard JS variables
 	var currentPage = 1,
 		fadeOutTime = 100,
 		fadeInTime = 300
 	;
 	
+	//Brings up the home tab
 	$game.click(function(){
 		
 		if(currentPage != 1){
@@ -30,6 +33,7 @@ $(document).ready(function(){
 		}
 	});
 	
+	//Brings up the team tab. This tab will show up when the user clicks the team button in the nav bar or when the user clicks the "Read More..." link in the home tab.
 	$team.click(function(){
 		
 		if(currentPage != 2){
@@ -47,6 +51,7 @@ $(document).ready(function(){
 		}
 	});
 	
+	//Brings up the contact tab.
 	$contact.click(function(){
 		
 		if(currentPage != 3){
@@ -64,7 +69,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	
+	//Fades all tabs other than the tab that the user is switching to.
 	var fadeAll = function(ignore){
 		if(ignore != 1){
 			$page1.animate({opacity:0},{duration:fadeOutTime, complete:function(){$(this).css('display','none');}});
@@ -80,14 +85,19 @@ $(document).ready(function(){
 			
 	};
 	
+	//Redirect to team tab.
 	if(window.location.hash === '#team'){
 		$team.click();
 	}
+	
+	//Redirect to contact tab.
 	if(window.location.hash === '#contact'){
 		$contact.click();
 	}
 	
 });
+
+//Embeds the facebook video into the modal.
 var firstVid = true;
 function video(){
 	if(firstVid){

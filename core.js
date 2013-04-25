@@ -102,7 +102,7 @@ var firstVid = true;
 function video(){
 	if(firstVid){
 		firstVid = false;
-		$('#myModal').html("<div class='flex-video'><iframe src='https://www.facebook.com/video/embed?video_id=10200384229921907' width='1280' height='720' style='border-width:0px' ></iframe></div>");
+		$('.flex-video').html("<iframe src='https://www.facebook.com/video/embed?video_id=10200384229921907' width='1280' height='720' style='border-width:0px' ></iframe>");
 	}
 	
 }

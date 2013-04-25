@@ -4,10 +4,11 @@ $(document).ready(function(){
 	$team = $("#teamButton, #teamButton2");
 	$game = $(".gameButton");
 	$contact = $("#contactButton");
-	
+	$play = $("#playNowButton");
 	$page1 = $("#page1");
 	$page2 = $("#page2");
 	$page3 = $("#page3");
+	$page4 = $("#page4");
 	
 	//Standard JS variables
 	var currentPage = 1,
@@ -69,6 +70,23 @@ $(document).ready(function(){
 		}
 	});
 	
+	$play.click(function(){
+		
+		if(currentPage != 4){
+			fadeAll(4);
+			currentPage = 4;
+			setTimeout(function(){
+				console.log("play now fade in");
+				$page4.css('display','');
+				location.hash = 'play';
+				$page4.animate({opacity:1},{'duration':fadeInTime,'complete':function(){
+					$(this).show();
+					
+				}});
+			},fadeOutTime);
+		}
+	});
+	
 	//Fades all tabs other than the tab that the user is switching to.
 	var fadeAll = function(ignore){
 		if(ignore != 1){
@@ -82,7 +100,11 @@ $(document).ready(function(){
 		if(ignore != 3){
 			$page3.animate({opacity:0},{duration:fadeOutTime, complete:function(){$(this).css('display','none');}});
 		}
-			
+		if(ignore != 4){
+			$('#gamePlayer').remove();
+			$("#pageFourArea").show();
+			$page4.animate({opacity:0},{duration:fadeOutTime, complete:function(){$(this).css('display','none');}});
+		}	
 	};
 	
 	//Redirect to team tab.
@@ -94,8 +116,18 @@ $(document).ready(function(){
 	if(window.location.hash === '#contact'){
 		$contact.click();
 	}
+	
+	//Redirect to play now tab.
+	if(window.location.hash === '#play'){
+		$play.click();
+	}
 	$('.flex-video').html("<iframe src='https://www.facebook.com/video/embed?video_id=10200384229921907' width='1280' height='720' style='border-width:0px' ></iframe>");
-
+	
+	$('#playButton').click(function(){
+		
+		$('#pageFourArea').after("<iframe src='Master-Machines.github.html' height='640' width='1000' style='border-width:0px' id='gamePlayer'></iframe>");
+		$("#pageFourArea").hide();
+	});
 	
 });
 

@@ -95,7 +95,7 @@ $(document).ready(function(){
 		$contact.click();
 	}
 	$('.flex-video').html("<iframe src='https://www.facebook.com/video/embed?video_id=10200384229921907' width='1280' height='720' style='border-width:0px' ></iframe>");
-	$('#myModal').show();
+
 	
 });
 

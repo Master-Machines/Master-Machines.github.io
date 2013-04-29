@@ -59,6 +59,10 @@
 				u.initPlugin(jQuery("#unityPlayer")[0], "Master-Machines.github.unity3d");
 			});
 		-->
+		
+		function A(url){
+			parent.WebPlayerAnalytics(url);
+		}
 		</script>
 		<style type="text/css">
 		<!--
@@ -116,7 +120,6 @@
 		</style>
 	</head>
 	<body>
-		<p class="header"><span>Unity Web Player | </span>BreakingCollision</p>
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
@@ -131,6 +134,5 @@
 				</div>
 			</div>
 		</div>
-		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
 	</body>
 </html>

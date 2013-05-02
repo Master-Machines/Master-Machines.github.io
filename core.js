@@ -128,7 +128,7 @@ $(document).ready(function(){
 		$('#pageFourArea').after("<iframe src='Master-Machines.github.html' height='640' width='1000' style='border-width:0px' id='gamePlayer'></iframe>");
 		$("#pageFourArea").hide();
 	});
-	WebPlayerAnalytics('hi');
+	
 });
 
 //Embeds the facebook video into the modal.

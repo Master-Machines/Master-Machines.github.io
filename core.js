@@ -146,7 +146,7 @@ function fadeToBlack(){
 	$('#loadWarning').remove();
 	setTimeout(function(){
 		$('#gamePlayer').after("<div><label id='formLink' style='color:#0f0; opacity: .4'>Done playing? Please fill out our <a href='https://docs.google.com/forms/d/1sikoSleGI8cxFpOML-wYax_F3nY1uPwRWpfLTa04bAk/viewform'>feedback form</a></label></div>");
-		$('#gamePlayer').after("<div><label id='fullScreenMessage' style='color:#0f0; opacity: .4'>Press the 'f' key to enter fullscreen. Must not be main menu for this to work.</label></div>");
+		$('#gamePlayer').after("<div><label id='fullScreenMessage' style='color:#0f0; opacity: .4'>Press the 'f' key to enter fullscreen. You must not be in the main menu for this to work.</label></div>");
 	},1000);
 }
 

@@ -125,7 +125,7 @@ $(document).ready(function(){
 	
 	$('#playButton').click(function(){
 		
-		$('#pageFourArea').after("<iframe src='Master-Machines.github.html' height='640' width='1000' style='border-width:0px' id='gamePlayer'></iframe>");
+		$('#pageFourArea').after("<iframe src='Beta BC.html' height='640' width='1000' style='border-width:0px' id='gamePlayer'></iframe>");
 		$("#pageFourArea").hide();
 	});
 	

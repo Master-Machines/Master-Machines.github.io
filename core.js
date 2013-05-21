@@ -106,7 +106,7 @@ $(document).ready(function(){
 			$page4.animate({opacity:0},{duration:fadeOutTime, complete:function(){$(this).css('display','none');}});
 		}	
 		$('body').animate({'background-color':'#FFF'}, 200);
-		$('#formLink, #fullScreenMessage').remove();
+		$('#formLink, #fullScreenMessage, #loadingWarning').remove();
 	};
 	
 	//Redirect to team tab.
@@ -129,6 +129,8 @@ $(document).ready(function(){
 		
 		$('#pageFourArea').after("<iframe src='Beta BC.html' height='640' width='1000' style='border-width:0px' id='gamePlayer'></iframe>");
 		$("#pageFourArea").hide();
+		$('#gamePlayer').before("<div><label id='loadingWarning' style='color:#000; opacity: .4; font-size: 30px'>Loading may take a few minutes, sorry for the delay!</label></div>");
+		
 	});
 	
 
@@ -136,6 +138,7 @@ $(document).ready(function(){
 
 function fadeToBlack(){
 	$('body').animate({'background-color':'#000'}, 1000);
+	$('#loadingWarning').remove();
 	setTimeout(function(){
 		$('#gamePlayer').after("<div><label id='formLink' style='color:#0f0; opacity: .4'>Done playing? PLease fill out our <a href='https://docs.google.com/forms/d/1sikoSleGI8cxFpOML-wYax_F3nY1uPwRWpfLTa04bAk/viewform'>feedback form</a></label></div>");
 		$('#gamePlayer').after("<div><label id='fullScreenMessage' style='color:#0f0; opacity: .4'>Press the 'f' key to enter fullscreen. Must not be main menu for this to work.</label></div>");

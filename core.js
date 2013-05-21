@@ -105,6 +105,7 @@ $(document).ready(function(){
 			$("#pageFourArea").show();
 			$page4.animate({opacity:0},{duration:fadeOutTime, complete:function(){$(this).css('display','none');}});
 		}	
+		$('body').animate({'background-color':'#FFF'}, 200);
 	};
 	
 	//Redirect to team tab.
@@ -129,7 +130,17 @@ $(document).ready(function(){
 		$("#pageFourArea").hide();
 	});
 	
+
 });
+
+function fadeToBlack(){
+	$('body').animate({'background-color':'#000'}, 1000);
+	setTimeout(function(){
+		$('#gamePlayer').after("<div><label id='formLink' style='color:#0f0; opacity: .5'>Done playing? PLease fill out our <a href='https://docs.google.com/forms/d/1sikoSleGI8cxFpOML-wYax_F3nY1uPwRWpfLTa04bAk/viewform'>feedback form</a></label></div>");
+		$('#gamePlayer').after("<div><label id='fullScreenMessage' style='color:#0f0; opacity: .5'>Press the 'f' key to enter fullscreen.</label></div>");
+	},1000);
+}
+
 
 //Embeds the facebook video into the modal.
 var firstVid = true;

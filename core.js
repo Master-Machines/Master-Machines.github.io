@@ -113,15 +113,19 @@ $(document).ready(function(){
 	if(window.location.hash === '#team'){
 		$team.click();
 	}
-	
+	else
 	//Redirect to contact tab.
 	if(window.location.hash === '#contact'){
 		$contact.click();
 	}
-	
+	else
 	//Redirect to play now tab.
 	if(window.location.hash === '#play'){
 		$play.click();
+	}
+	else{
+		currentPage = -2;
+		$game.click();
 	}
 	$('.flex-video').html("<iframe src='https://www.facebook.com/video/embed?video_id=10200384229921907' width='1280' height='720' style='border-width:0px' ></iframe>");
 	

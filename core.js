@@ -129,7 +129,7 @@ $(document).ready(function(){
 		
 		$('#pageFourArea').after("<iframe src='Beta BC.html' height='640' width='1000' style='border-width:0px' id='gamePlayer'></iframe>");
 		$("#pageFourArea").hide();
-		$('#gamePlayer').before("<div><label id='loadWarning' style='color:#000; opacity: .4; font-size: 30px'>Initial load time may take up to 5 minutes.</label></div>");
+		$('#gamePlayer').before("<div><label id='loadWarning' style='color:#000; opacity: .4; font-size: 30px'>Initial load time may take up to 5 minutes. </label></div>");
 	
 		
 	});

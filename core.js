@@ -106,6 +106,7 @@ $(document).ready(function(){
 			$page4.animate({opacity:0},{duration:fadeOutTime, complete:function(){$(this).css('display','none');}});
 		}	
 		$('body').animate({'background-color':'#FFF'}, 200);
+		$('#formLink, #fullScreenMessage').remove();
 	};
 	
 	//Redirect to team tab.

@@ -106,6 +106,7 @@ $(document).ready(function(){
 			$page4.animate({opacity:0},{duration:fadeOutTime, complete:function(){$(this).css('display','none');}});
 		}	
 		$('body').animate({'background-color':'#FFF'}, 200);
+		$('hr').animate({'border-color':"999"},200);
 		$('#formLink, #fullScreenMessage, #loadWarning').remove();
 	};
 	
@@ -143,6 +144,7 @@ $(document).ready(function(){
 
 function fadeToBlack(){
 	$('#body').animate({'background-color':'#000'}, 5000);
+	$('hr').animate({'border-color':'#000'},5000);
 	$('#loadWarning').remove();
 	setTimeout(function(){
 		$('#gamePlayer').after("<div><label id='formLink' style='color:#0f0; opacity: .4'>Done playing? Please fill out our <a href='https://docs.google.com/forms/d/1sikoSleGI8cxFpOML-wYax_F3nY1uPwRWpfLTa04bAk/viewform' target='_blank' >feedback form</a>.</label></div>");

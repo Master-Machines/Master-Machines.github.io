@@ -131,10 +131,10 @@ $(document).ready(function(){
 	
 	$('#playButton').click(function(){
 		
-		$('#pageFourArea').after("<iframe src='Beta BC.html' height='640' width='1000' style='border-width:0px' id='gamePlayer'></iframe>");
+		$('#pageFourArea').after("<iframe src='http://files.zylinski.se/breakingCollision/Beta BC.html' height='640' width='1000' style='border-width:0px' id='gamePlayer'></iframe>");
 		$("#pageFourArea").hide();
-		$('#gamePlayer').before("<div><label id='loadWarning' style='color:#000; opacity: .4; font-size: 35px'>Initial load time may take up to 5 minutes. </label></div>");
-	
+		//$('#gamePlayer').before("<div><label id='loadWarning' style='color:#000; opacity: .4; font-size: 35px'>Initial load time may take up to 5 minutes. </label></div>");
+		fadeToBlack();
 		
 	});
 	
@@ -142,12 +142,12 @@ $(document).ready(function(){
 });
 
 function fadeToBlack(){
-	$('#body').animate({'background-color':'#000'}, 1000);
+	$('#body').animate({'background-color':'#000'}, 5000);
 	$('#loadWarning').remove();
 	setTimeout(function(){
-		$('#gamePlayer').after("<div><label id='formLink' style='color:#0f0; opacity: .4'>Done playing? Please fill out our <a href='https://docs.google.com/forms/d/1sikoSleGI8cxFpOML-wYax_F3nY1uPwRWpfLTa04bAk/viewform'>feedback form</a></label></div>");
+		$('#gamePlayer').after("<div><label id='formLink' style='color:#0f0; opacity: .4'>Done playing? Please fill out our <a href='https://docs.google.com/forms/d/1sikoSleGI8cxFpOML-wYax_F3nY1uPwRWpfLTa04bAk/viewform' target='_blank' >feedback form</a></label></div>");
 		$('#gamePlayer').after("<div><label id='fullScreenMessage' style='color:#0f0; opacity: .39'>Press the 'f' key to enter fullscreen. You must not be in the main menu for this to work.</label></div>");
-	},1000);
+	},5000);
 }
 
 

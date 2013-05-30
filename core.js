@@ -128,8 +128,7 @@ $(document).ready(function(){
 		currentPage = -2;
 		$game.click();
 	}
-	//$('.flex-video').html("<iframe src='https://www.facebook.com/video/embed?video_id=10200384229921907' width='1280' height='720' style='border-width:0px' ></iframe>");
-	$('.flex-video').html("Trailer coming soon!");
+	$('.flex-video').html("<iframe width='560' height='315' src='http://www.youtube.com/embed/JmoURSy40zw' frameborder='0' allowfullscreen></iframe>");
 	$('#playButton').click(function(){
 		
 		$('#pageFourArea').after("<iframe src='http://files.zylinski.se/breakingCollision/Beta BC.html' height='640' width='1000' style='border-width:0px' id='gamePlayer'></iframe>");
